@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "geekmod",
+	"version": "1.0.0",
+	"name": "GeekMod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"ramyette"
+	],
+	"contact": {
+		"homepage": "https://ramyette.dev/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/geekmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.ramyette.geekmod.GeekMod"
+		],
+		"client": [
+			"dev.ramyette.geekmod.GeekModClient"
+		],
+		"fabric-datagen": [
+			"dev.ramyette.geekmod.GeekModDataGenerator"
+		]
+	},
+	"mixins": [
+		"geekmod.mixins.json",
+		{
+			"config": "geekmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
