@@ -1,1 +1,2 @@
 /give @p geekmod:test_imem
+/give @p geekmod:geekbar
